@@ -809,15 +809,19 @@
     text-transform: uppercase;
     @extend %roboto-400;
     padding: 14px 0;
-    border:none;
+    border: none;
     width: 100%;
     cursor: pointer;
   }
 
-  &__error{
+  &__error {
     padding-top: 12px;
     display: inline-block;
-    color:$accent;
+    color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 25px;
   }
 }
 
