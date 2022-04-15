@@ -267,6 +267,18 @@
   }
 }
 
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 120px 0 130px;
+    text-align: center;
+  }
+}
+
 .categories-info {
   padding: 120px 0;
   background-image: url('../images/decor/categories-left-bg.png');
@@ -656,15 +668,16 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    &::after{
-      content:'';
+
+    &::after {
+      content: '';
       position: absolute;
       right: -20px;
       top: -25px;
       z-index: -1;
       width: 126px;
       height: 53px;
-      background-image:url('../images/decor/blog-decor.svg');
+      background-image: url('../images/decor/blog-decor.svg');
     }
   }
 
@@ -672,13 +685,16 @@
     max-width: 370px;
     border: 1px solid #ececec;
     transition: all 0.3s;
-    &:hover{
+
+    &:hover {
       box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-      border:none;
-      .blog__item-link{
-        color:$accent;
-        &::after{
-          background-image:url('../images/icons/arrow-accent.svg')
+      border: none;
+
+      .blog__item-link {
+        color: $accent;
+
+        &::after {
+          background-image: url('../images/icons/arrow-accent.svg')
         }
       }
     }
@@ -744,8 +760,64 @@
     width: 10px;
     height: 8px;
     background-image: url('../images/icons/arrow.svg');
-     top:8px;
+    top: 8px;
     right: -14px;
+  }
+}
+
+.modal {
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
+
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    color: #909090;
+    font-size: 22px;
+    @extend %roboto-400;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__label {
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  &__input {
+    border: none;
+    background-color: $bg;
+    margin-top: 4px;
+    display: block;
+    height: 60px;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  &__btn {
+    display: block;
+    background-color: $title;
+    color: #fff;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border:none;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__error{
+    padding-top: 12px;
+    display: inline-block;
+    color:$accent;
   }
 }
 
