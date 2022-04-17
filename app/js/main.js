@@ -1,5 +1,7 @@
 $ (function () {
 
+  $('.filter-price__input')
+
   $('.top-slider__inner').slick({
     dots:true,
     arrows:false,
